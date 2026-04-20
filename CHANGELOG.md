@@ -2,6 +2,13 @@
 
 # Changelog
 
+## [3.5.1](https://github.com/Zephyruso/zashboard/compare/v3.5.0...v3.5.1) (2026-04-20)
+
+
+### Bug Fixes
+
+* **storage:** update storage paths from 'config' to 'cache' for proxies and settings ([773d103](https://github.com/Zephyruso/zashboard/commit/773d103988b3b74c202224d5fe82476f7953f756))
+
 ## [3.5.0](https://github.com/Zephyruso/zashboard/compare/v3.4.0...v3.5.0) (2026-04-20)
 
 
