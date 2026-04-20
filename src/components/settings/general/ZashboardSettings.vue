@@ -30,7 +30,7 @@
 
     <div
       v-if="isVisibleActions"
-      class="settings-grid my-3 gap-2 p-3 md:grid-cols-2!"
+      class="settings-grid my-3 gap-2 p-3 grid-cols-2!"
     >
       <button
         :class="twMerge('btn btn-neutral btn-sm', isUIUpgrading ? 'animate-pulse' : '')"
