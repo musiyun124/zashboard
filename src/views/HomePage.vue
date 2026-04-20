@@ -33,7 +33,7 @@
 
         <template v-if="isMiddleScreen">
           <div
-            class="bg-base-100/20 dock dock-xs z-10 h-14 w-auto shadow-sm backdrop-blur-sm"
+            class="dock dock-xs z-10 h-14 w-auto shadow-sm"
             :style="{
               padding: '0',
               bottom: 'calc(var(--spacing) * 2 + env(safe-area-inset-bottom))',
