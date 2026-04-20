@@ -41,7 +41,7 @@
 
       <div
         v-if="isVisibleActions"
-        class="grid-cols-2 gap-2 px-4 py-3"
+        class="grid grid-cols-2 gap-2 px-4 py-3"
       >
         <template v-if="!isSingBox || displayAllFeatures">
           <button
