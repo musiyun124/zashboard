@@ -3,9 +3,9 @@
     <div class="settings-section-label">{{ $t('settingsSectionApplication') }}</div>
     <div class="settings-grid">
       <SettingItem
+        v-if="showDashboardUpgrade"
         :setting-key="k.actions"
         :anchor-key="`${k.actions}.upgradeDashboard`"
-        :when="can('dashboardUpgrade')"
       >
         <div class="setting-item-label">{{ $t('upgradeDashboard') }}</div>
         <button
@@ -20,10 +20,7 @@
         <DashboardSettings icon-only />
       </SettingItem>
       <LanguageSelect />
-      <SettingItem
-        :setting-key="k.autoUpgradeDashboard"
-        :when="can('dashboardUpgrade')"
-      >
+      <SettingItem :setting-key="k.autoUpgradeDashboard">
         <div class="setting-item-label">{{ $t('autoUpgradeDashboard') }}</div>
         <input
           v-model="autoUpgradeDashboard"
@@ -267,6 +264,9 @@ const hasVisibleInteractionItems = computed(
     (!isMiddleScreen.value && isVisibleShortcuts.value) ||
     (showDisplayAllFeatures.value && isVisibleDisplayAllFeatures.value),
 )
+
+// honk 没有 /upgrade/ui,按钮点了必然 404。
+const showDashboardUpgrade = computed(() => can('dashboardUpgrade'))
 
 const isUIUpgrading = ref(false)
 const handlerClickUpgradeUI = async () => {
