@@ -1,1 +1,0 @@
-import{h as e,m as t}from"./index-REXsi3TF.js";var n=async()=>{e.value=[],t.value=[]};export{n as fetchRules};
